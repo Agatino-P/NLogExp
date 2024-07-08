@@ -1,0 +1,6 @@
+@NLogExp.Domain_HostAddress = http://localhost:5157
+
+GET {{NLogExp.Domain_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
