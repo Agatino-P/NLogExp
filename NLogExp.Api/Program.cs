@@ -44,18 +44,9 @@ public class Program
 
     public static void ConfigureNlog()
     {
-        ConsoleTarget consoleTarget = new()
-        {
-            Name = "consoleTarget",
-            Layout = "${message}"
-        };
-        //LoggingConfiguration loggingConfiguration = new LoggingConfiguration();
-        //loggingConfiguration.AddRuleForAllLevels(consoleTarget);
-        //LogFactory logFactory = new LogFactory(loggingConfiguration);
-        LogFactory logFactory = new ();
-        Logger psLogger =logFactory.GetLogger("logconsole");
-        psLogger.Debug("Logging from nlog");
-
+        LogFactory logFactory = new();
+        NLog.GlobalDiagnosticsContext.Set("customLevel", "Info");
+        logFactory.GetLogger("logconsole").Warn("warn");
 
     }
 }
