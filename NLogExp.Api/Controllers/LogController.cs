@@ -9,22 +9,36 @@ namespace NLogExp.Api.Controllers;
 public class LogController : ControllerBase
 {
 
-    private Logger _logger;
+    
+    private readonly ILogger<LogController> _logger;
+
     public LogController(ILogger<LogController> logger)
     {
-        LogFactory logFactory = new();
-        _logger= logFactory.GetLogger("logconsole");
-        var cl0 = NLog.GlobalDiagnosticsContext.Get("customLevel");
-        NLog.GlobalDiagnosticsContext.Set("customLevel", "Info");
-        var cl1=NLog.GlobalDiagnosticsContext.Get("customLevel");
+        this._logger = logger;
     }
 
     [HttpGet("Debug")]
-    public void Debug(int i=1) => _logger.Debug(i.ToString());
+    public void Debug(int i = 1)
+    {
+        //_logger.Debug(i.ToString());
+    }
 
     [HttpGet("Info")]
     public void Info(int i=2)
     {
-        _logger.Info(i.ToString());
+        //_logger.Info(i.ToString());
     }
+
+    [HttpGet("Error")]
+    public void Error(int i = 3)
+    {
+        Person p1 = new("F", "L");
+        
+        _logger.LogError("Exp: {@Person}", p1);
+    }
+
+
+    
 }
+
+public record Person(string First, string Last);

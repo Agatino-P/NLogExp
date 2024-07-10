@@ -44,9 +44,10 @@ public class Program
 
     public static void ConfigureNlog()
     {
-        LogFactory logFactory = new();
-        NLog.GlobalDiagnosticsContext.Set("customLevel", "Info");
-        logFactory.GetLogger("logconsole").Warn("warn");
+        //LogFactory logFactory = new();
+        //NLog.GlobalDiagnosticsContext.Set("customLevel", "Info");
+        //logFactory.GetLogger("logconsole").Warn("warn");
 
     }
 }
+

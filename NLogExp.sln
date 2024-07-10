@@ -5,9 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogExp.Api", "NLogExp.Api\NLogExp.Api.csproj", "{07EBFBC0-6CB2-4E4A-AB49-037D1170A7A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogExp.AppHost", "NLogExp.AppHost\NLogExp.AppHost.csproj", "{FE249345-B3C8-49BD-89B7-47FAB88A57E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogExp.AppHost", "NLogExp.AppHost\NLogExp.AppHost.csproj", "{FE249345-B3C8-49BD-89B7-47FAB88A57E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogExp.ServiceDefaults", "NLogExp.ServiceDefaults\NLogExp.ServiceDefaults.csproj", "{823448E4-CF87-424C-B6C0-8A194BDFAFB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogExp.Domain.Tests", "..\test\NLogExp.Domain.Tests\NLogExp.Domain.Tests.csproj", "{1D1FA14C-B7AF-43F3-A3FF-82419FD30A0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{823448E4-CF87-424C-B6C0-8A194BDFAFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823448E4-CF87-424C-B6C0-8A194BDFAFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{823448E4-CF87-424C-B6C0-8A194BDFAFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1FA14C-B7AF-43F3-A3FF-82419FD30A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1FA14C-B7AF-43F3-A3FF-82419FD30A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1FA14C-B7AF-43F3-A3FF-82419FD30A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1FA14C-B7AF-43F3-A3FF-82419FD30A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
